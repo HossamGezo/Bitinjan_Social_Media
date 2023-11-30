@@ -1,0 +1,189 @@
+// Import All Helpers Directory Contents
+@use "../helpers/usinghelpers" as *;
+/*
+------------------------------
+      Header Styling
+------------------------------
+*/
+.header {
+  background-color: color(secondary-color);
+  padding: 30px;
+  border-radius: 0 0 10px 10px;
+  @include Boxshadow;
+  @include flex(null, null, space-between, center, 35px);
+  &__logo {
+    font: {
+      family: 'EB Garamond', serif;
+      size: 25px;
+      style: italic;
+      weight: 700;
+    }
+    @include Border(70%, -4px, main-text-color);
+  }
+  .pages {
+    flex: 1;
+    a {
+      margin-right: 15px;
+      font-weight: bold;
+      @include transition;
+      &:hover {
+        color: color(hover-color);
+      }
+    }
+  }
+  .before-login {
+    .login:first-child {
+      margin-right: 5px;
+    }
+  }
+  .after-login {
+    @include flex(null, null, space-between, center, 30px);
+    .user {
+      @include flex(null, column, center, null, 5px);
+      img {
+        width: 50px;
+        border-radius: 50%;
+      }
+      &__name {
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+/*
+------------------------------
+      Create Post
+------------------------------
+*/
+.create-post {
+  margin: 50px 0;
+  padding: 40px 20px 30px;
+  background-color: color(secondary-color);
+  border-radius: 10px;
+  @include Boxshadow;
+  &__head {
+    padding-bottom: 40px;
+    @include flex(null, null, space-between, center, 20px);
+    @include Border(70%, -5px, create-color) {
+      left: 50%;
+      transform: translateX(-50%);
+      height: 3px;
+    }
+    margin-bottom: 50px;
+    .user__image {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+    input {
+      flex: 1;
+      padding: 20px;
+      background-color: color(create-color);
+      border: none;
+      outline: none;
+      border-radius: 500px;
+      @include Boxshadow();
+      @include transition;
+      &:hover {
+        background-color: color(create-hover-color);
+        cursor: pointer;
+      }
+      &::placeholder {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  &__images {
+    @include flex(null, null, space-evenly, center, null);
+    .img-wrapper {
+      width: 32%;
+      text-align: center;
+      padding: 7px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      @include transition;
+      &:hover {
+        background-color: color(create-hover-color);
+      }
+      img {
+        width: 40px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+/*
+------------------------------
+      Post Styling
+------------------------------
+*/
+.posts {
+  .post {
+    &:first-child {
+      margin-top: 50px;
+    }
+    background-color: color(secondary-color);
+    margin-bottom: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    @include Boxshadow;
+    &__head {
+      padding: 20px;
+      background-color: color(head-color);
+      @include flex(null, null, null, center, 15px);
+      border-bottom: 2px solid color(border-color);
+      margin-bottom: 20px;
+      .user__image {
+        width: 50px;
+        border-radius: 50%;
+      }
+      .user__name {
+        font-weight: bold;
+      }
+    }
+    &__body {
+      padding: 0 20px;
+      &--img-wrapper{
+        width: 100%;
+        margin: auto;
+        img {
+          width: 100%;
+          height: 500px;
+          border-radius: 10px;
+        }
+        margin-bottom: 10px;
+      }
+      &--time {
+        width: fit-content;
+        font-size: 20px;
+        font-weight: bold;
+        color: color(secondary-text-color);
+        margin-bottom: 25px;
+        position: relative;
+        @include Border(70%, -5px, red-color);
+      }
+      &--content {
+        margin: 10px 0;
+        padding-bottom: 20px;
+        @include Border(70%, -5px, red-color);
+        &-head {
+          margin-bottom: 10px;
+        }
+        &-desc {
+          font-size: 18px;
+        }
+      }
+    }
+    &__comment {
+      padding: 30px 20px;
+      @include flex(null, null, null, center, 20px);
+    }
+  }
+}

@@ -1,0 +1,52 @@
+// Import All Helpers Directory Contents
+@use "../helpers/usinghelpers" as *;
+/*
+------------------------------
+      Profile Styling
+------------------------------
+*/
+.profile {
+  .main-detailes {
+    background-color: color(secondary-color);
+    margin-block: 50px;
+    border-radius: 10px;
+    @include flex(null, null, space-around, null, 10px); 
+    padding: 20px;
+    &__image {
+      padding: 20px;
+      flex: 1;
+      border-right: 2px solid color(track-color);
+      &-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+    }
+    &__detailes {
+      @include flex(null, column, center, center, 20px);
+      border-right: 2px solid color(track-color);
+      padding: 0 20px 50px 0;
+      flex: 1;
+      font-size: 30px;
+    }
+    &__posts--comments {
+      @include flex(null, column, center, flex-start, 20px);
+      padding-left: 50px;
+      flex: 1;
+      font-size: 60px;
+      sub {
+        font-size: 20px;
+        color: gray;
+      }
+    }
+  }
+  .profile__name {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-block-end: 50px;
+  }
+  .profile__posts {
+    
+  }
+}

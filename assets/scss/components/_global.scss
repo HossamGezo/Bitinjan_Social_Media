@@ -1,0 +1,46 @@
+// Import Helpers Directory Content
+@use "../helpers/usinghelpers" as *;
+
+/*
+------------------------------
+      Global Styling
+------------------------------
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: color(main-color);
+  font-family: Arial;
+  color: color(main-text-color);
+  @include scrollBar(track-color, thumb-color);
+}
+a {
+  text-decoration: none;
+}
+button, a {
+  cursor: pointer;
+  color: inherit;
+}
+ul li {
+  list-style-type: none;
+}
+h1 {
+  margin: 0;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include media(md) {
+    width: 720px;
+  }
+  @include media(lg) {
+    width: 960px;
+  }
+  @include media(xl) {
+    width: 1140px;
+  }
+}

@@ -1,0 +1,30 @@
+// color Break Points
+$color-breakpoints: (
+  main-color: #EEE9FF,
+  secondary-color: #FFFFFF,
+  head-color: #F7F7F7,
+  main-text-color: #151515,
+  secondary-text-color: #A6A7A7,
+  red-color: red,
+  border-color: #dddddd,
+  hover-color: #7b64cb,
+  create-color: #F1F2F5,
+  create-hover-color: #E3E6E9,
+  track-color: #baa8f6,
+  thumb-color: #9080c8,
+  login: #008000,
+  login-hover: #0f5a0f,
+  register: #0E6CFC,
+  register-hover: #1254b8,
+  logout: #ff0000,
+  logout-hover: #d60f0f,
+  tag-color: #7E7E7E,
+);
+// Media Break Points
+$media-breakpoints: (
+  sm: "(max-width: 767px)",
+  md: "(min-width: 768px)",
+  lg: "(min-width: 992px)",
+  xl: "(min-width: 1200px)"
+);
+// Begining Of The Project

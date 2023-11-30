@@ -1,0 +1,54 @@
+// Import All Helpers Directory Content
+@use "../helpers/usinghelpers" as *;
+
+/*
+------------------------------
+      Buttons Component
+------------------------------
+*/
+// ---------- General Button Styling
+.btn {
+  padding: 7px 15px;
+  font-weight: bold;
+  color: color(secondary-color);
+  border: none;
+  border-radius: 5px;
+  @include transition;
+  &:hover {
+    scale: 1.03;
+  }
+}
+// ---------- Login Button Styling
+.login {
+  background-color: color(login);
+  &:hover {
+    background-color: color(login-hover);
+  }
+}
+// ---------- Login Button Styling
+.register {
+  background-color: color(register);
+  &:hover {
+    background-color: color(register-hover);
+  }
+}
+// ---------- Logout Button Styling
+.logout-btn {
+  background-color: color(logout);
+  &:hover {
+    background-color: color(logout-hover);
+  }
+}
+// ---------- Logout Button Styling
+.close {
+  background-color: color(tag-color);
+  &:hover {
+    background-color: color(logout-hover)
+  }
+}
+// ---------- Tag Button Styling
+.tag {
+  background-color: color(tag-color);
+  text-transform: capitalize;
+  border-radius: 20px;
+}

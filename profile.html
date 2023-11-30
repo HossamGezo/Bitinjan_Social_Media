@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Project Name -->
+    <title>Bitinjan</title>
+    <!-- ! // ---------- ! CSS Templates ! ---------- // -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"/>
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"/>
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"/>
+    <!-- Main CSS Template File -->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!-- ! // ---------- ! JS Templates ! ---------- // -->
+    <!-- Axios Library -->
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <!-- Main JS Template File -->
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/profile.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__logo">Bitinjan</div>
+        <div class="pages">
+          <a href="index.html">Home</a>
+          <a onclick="goProfile();">Profile</a>
+        </div>
+        <!-- // Pages -->
+        <!-- Component: Login Wrapper --> 
+        <div class="login__wrapper"></div>
+        <!-- // Login Wrapper -->
+      </header>
+      <!-- // Header -->
+      <!-- Component: Create Post Wrapper --> 
+      <div class="create-post__wrapper"></div>
+      <!-- // Create Post Wrapper -->
+      <div class="profile">
+        <div class="main-detailes">
+          <div class="main-detailes__image">
+            <img class="main-detailes__image-img" src="" alt="PROFILE"/>
+          </div>
+          <!-- // Profile Image -->
+          <div class="main-detailes__detailes">
+            <div class="email"></div>
+            <div class="userName"></div>
+            <div class="name"></div>
+          </div>
+          <!-- // Profile Detailes -->
+          <div class="main-detailes__posts--comments">
+            <div class="postsCount"></div>
+            <div class="commentsCount"></div>
+          </div>
+          <!-- // Profile Posts Comments -->
+        </div>
+        <!-- // Main Detailes -->
+        <div class="profile__name"></div>
+        <!-- // Profile Name -->
+        <div class="profile__posts posts"></div>
+      </div>
+      <!-- // Profile -->
+    </div>
+    <!-- // Container -->
+    <!-- ! ------------- COMPONENTS ------------- ! -->
+    <div class="components">
+      <!-- Component: Overlay --> 
+      <div class="overlayWrapper"></div>
+      <!-- // Overlay -->
+      <!-- Component: Side Message --> 
+      <div class="side-message">
+        <span class="message"></span>
+        <i></i>
+      </div>
+      <!-- // Side Message -->
+    </div>
+    <!-- // Components -->
+  </body>
+</html>
